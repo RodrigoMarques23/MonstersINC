@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public float speed;
     public float jumpForce;
     public float moveInput;
+    public Animator animator;
 
     private Rigidbody2D rb;
     private bool facingRight = true;
@@ -21,6 +22,8 @@ public class Player : MonoBehaviour
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
+        animator.SetFloat("speed", Mathf.Abs(moveInput));
+
         if (facingRight == false && moveInput > 0)
         {
             flip();
@@ -30,6 +33,16 @@ public class Player : MonoBehaviour
             flip();
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+
+    {
+        if(other.gameObject.CompareTag("Collectable"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
+
     void flip()
     {
         facingRight = !facingRight;

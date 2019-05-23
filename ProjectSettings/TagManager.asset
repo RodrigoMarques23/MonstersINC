@@ -8,6 +8,7 @@ TagManager:
   - Teleport
   - Teleport_V
   - Teleport_A
+  - Collectable
   layers:
   - Default
   - TransparentFX
