@@ -17,9 +17,9 @@ public class Tp_V : MonoBehaviour
         {
 
         }
-        void OnTriggerEnter2D(Collider2D d)// é 'c' mas pode ser qlqr coisa 
+        void OnTriggerStay2D(Collider2D d)// é preferivel fazer um overLap, estudar opções.
         {
-            if (d.gameObject.tag == "Teleport_V")
+            if (d.gameObject.tag == "Teleport_V"  && Input.GetKey(KeyCode.W))
             {
                 transform.position = teleportDestination.position;
                 Debug.Log("colider");
