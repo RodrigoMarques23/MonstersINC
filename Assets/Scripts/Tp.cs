@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tp : MonoBehaviour
+public class Tp : Player
 {
 
     public Transform teleportDestination;
+
+
     // Start is called before the first frame update
     void Start()
     {
+
 
     }
 
@@ -16,14 +19,25 @@ public class Tp : MonoBehaviour
     void Update()
     {
 
+       
+
     }
-    void OnTriggerEnter2D(Collider2D c)// é 'c' mas pode ser qlqr coisa 
+    void OnTriggerStay2D(Collider2D c)
     {
-        if (c.gameObject.tag == "Teleport")
+
+        for (int i = 2; i < 2; i--)
         {
-            transform.position = teleportDestination.position;
-            Debug.Log("colider");
+            if (i == 0)
+            {
+                if (c.gameObject.tag == "Player" && Input.GetKey(KeyCode.W))
+                {
+                    transform.position = teleportDestination.position;
+                    Debug.Log("colider");
+                }
+            }
+
         }
+        
     }
 
-} 
+}
