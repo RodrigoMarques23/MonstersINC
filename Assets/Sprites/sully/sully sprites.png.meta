@@ -1,17 +1,19 @@
 fileFormatVersion: 2
-guid: c3347f54af3344f40bd5e6fe6639ea02
+guid: 6d6656f8155b79248b5aa36439f9cd7f
 TextureImporter:
   fileIDToRecycleName:
-    21300000: mike sprite fix_0
-    21300002: mike sprite fix_1
-    21300004: mike sprite fix_2
-    21300006: mike sprite fix_3
-    21300008: mike sprite fix_4
-    21300010: mike sprite fix_5
-    21300012: mike sprite fix_6
-    21300014: mike sprite fix_7
+    21300000: sully sprites_0
+    21300002: sully sprites_1
+    21300004: sully sprites_2
+    21300006: sully sprites_3
+    21300008: sully sprites_4
+    21300010: sully sprites_5
+    21300012: sully sprites_6
+    21300014: sully sprites_7
+    21300016: sully sprites_8
+    21300018: sully sprites_9
   externalObjects: {}
-  serializedVersion: 9
+  serializedVersion: 7
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -39,7 +41,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -88,28 +90,17 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mike sprite fix_0
+      name: sully sprites_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 308
-        width: 21
-        height: 19
+        x: 4
+        y: 300
+        width: 38
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,19 +108,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 315130b921289f94fb311584de2f3b0e
+      spriteID: 77fa29db312387141afdf8d09cf57e55
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mike sprite fix_1
+      name: sully sprites_1
       rect:
         serializedVersion: 2
-        x: 41
-        y: 309
-        width: 21
-        height: 18
+        x: 51
+        y: 302
+        width: 38
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,19 +128,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1c7bc158c98dda40b3511bf1e704a78
+      spriteID: c442afbbeb5615246aebc9396f776bd8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mike sprite fix_2
+      name: sully sprites_2
       rect:
         serializedVersion: 2
-        x: 6
-        y: 272
-        width: 21
-        height: 21
+        x: 4
+        y: 252
+        width: 34
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,19 +148,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbe980b56f25cc3479cf69eadccc83b2
+      spriteID: 49e1d3c3641301d4796905ca9154a96f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mike sprite fix_3
+      name: sully sprites_3
       rect:
         serializedVersion: 2
-        x: 40
-        y: 273
-        width: 21
-        height: 20
+        x: 50
+        y: 252
+        width: 40
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,19 +168,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bff1c4c229ef0844795f0b1ea6415738
+      spriteID: 1f8d31e208c90bd47a5a5031f1b8b6c1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mike sprite fix_4
+      name: sully sprites_4
       rect:
         serializedVersion: 2
-        x: 72
-        y: 272
-        width: 18
-        height: 21
+        x: 101
+        y: 253
+        width: 38
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,19 +188,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49c67dbcb7955da498f56b7a91a44075
+      spriteID: 5cca8a4bcd9888842bb4d93bd34a99e9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mike sprite fix_5
+      name: sully sprites_5
       rect:
         serializedVersion: 2
-        x: 102
-        y: 272
-        width: 18
-        height: 18
+        x: 155
+        y: 253
+        width: 34
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,19 +208,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 066d039bd8c284a4aa75a89449ce239c
+      spriteID: 491fd1dd83f858b42b0e5dd14b3d672a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mike sprite fix_6
+      name: sully sprites_6
       rect:
         serializedVersion: 2
-        x: 128
-        y: 272
-        width: 24
-        height: 21
+        x: 205
+        y: 253
+        width: 42
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,19 +228,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 867f4c6f71dc9ab4e8163dfbda98383f
+      spriteID: ca356b0f45b1de741acf7264c037450b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mike sprite fix_7
+      name: sully sprites_7
       rect:
         serializedVersion: 2
-        x: 158
-        y: 272
-        width: 25
-        height: 21
+        x: 259
+        y: 254
+        width: 46
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,7 +248,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2140b17baeda6ce4cab57f3b5d4795c7
+      spriteID: 554561b1aadb2314586b951d53fabefa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sully sprites_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 200
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b6804b02eedb14468539414281bd512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sully sprites_9
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 200
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05870929fb69fbc4ea470513e3fa085c
       vertices: []
       indices: 
       edges: []
@@ -265,7 +296,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a12189f0660ebdf41bfd6dcbbf189c6d
+    spriteID: 77958f515eb7c1b4a85bb1892a022df2
     vertices: []
     indices: 
     edges: []
