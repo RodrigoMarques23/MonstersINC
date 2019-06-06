@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
     public float jumpForce;
     public float moveInput;
     public Animator animator;
+    public float knockbackSpeed = 250.0f;
+
+    float knockbackTimer;
 
     private Rigidbody2D rb;
     private bool facingRight = true;
@@ -19,19 +22,34 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        moveInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
-        animator.SetFloat("speed", Mathf.Abs(moveInput));
+        if (knockbackTimer <= 0.0f)
+        {
+            moveInput = Input.GetAxis("Horizontal");
+            rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
-        if (facingRight == false && moveInput > 0)
-        {
-            flip();
+            animator.SetFloat("speed", Mathf.Abs(moveInput));
+
+            if (facingRight == false && moveInput > 0)
+            {
+                flip();
+            }
+            else if (facingRight == true && moveInput < 0)
+            {
+                flip();
+            }
+
+            if (knockbackTimer > 0.0f)
+            {
+                knockbackTimer -= Time.deltaTime;
+            }
         }
-        else if (facingRight == true && moveInput < 0)
-        {
-            flip();
-        }
+    }
+
+    public void Knockback( Vector2 hitDirection)
+    {
+        knockbackTimer = 0.5f;
+        rb.velocity = knockbackSpeed * hitDirection;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -41,6 +59,7 @@ public class Player : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+
     }
 
     void flip()
