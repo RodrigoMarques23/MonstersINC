@@ -41,10 +41,10 @@ public class TP_Mike : MonoBehaviour {
 
           //vermelha
           else if (c.gameObject.tag == "TPV") {
-            if (key == 3) { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2); }
+            if (key >= 2) { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2); }
 
         }
-    }
+    }   
 
     private void OnTriggerEnter2D(Collider2D other) {
        
