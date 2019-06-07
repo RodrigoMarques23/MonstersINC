@@ -4,11 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - teleport
-  - Teleport
-  - Teleport_V
-  - Teleport_A
   - Collectable
+  - Enemy
+  - TPAM
+  - TPAM2
+  - TPAZ
+  - TPAZ2
+  - TPV
   layers:
   - Default
   - TransparentFX

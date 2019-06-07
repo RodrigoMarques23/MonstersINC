@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_1 : MonoBehaviour
+public class Randall : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
     [SerializeField] Transform groundSensor;
@@ -24,20 +24,27 @@ public class Enemy_1 : MonoBehaviour
 
         rigidBody.velocity = currentVelocity;
 
-        Collider2D groundCollider = Physics2D.OverlapCircle(groundSensor.position, 2.0f, LayerMask.GetMask("ground"));
-        if (groundCollider == null)
-        {
- //           transform.rotation = transform.rotation * Quaternion.AngleAxis(180.0f, Vector3.up);
-        }
+         Collider2D groundCollider = Physics2D.OverlapCircle(groundSensor.position, 2.0f, LayerMask.GetMask("ground"));
+         if (groundCollider == null)
+         {
+//            Debug.Log("Ground: Colliding with " + groundCollider.name);
 
-        Collider2D wallCollider = Physics2D.OverlapCircle(wallSensor.position, 2.0f, LayerMask.GetMask("ground"));
-        if (wallCollider)
-        {
-            transform.rotation = transform.rotation * Quaternion.AngleAxis(180.0f, Vector3.up);
-        }
+            if (transform.right.x > 0) transform.rotation = Quaternion.Euler(0, 180, 0);
+            else transform.rotation = Quaternion.identity;
+//            transform.rotation = transform.rotation * Quaternion.AngleAxis(180.0f, Vector3.up);
+         }
 
-        if (damageCollider)
-        {
+         Collider2D wallCollider = Physics2D.OverlapCircle(wallSensor.position, 2.0f,LayerMask.GetMask("ground")); 
+         if (wallCollider != null)
+         {
+            Debug.Log("Wall: Colliding with " + wallCollider.name);
+             transform.rotation = transform.rotation * Quaternion.AngleAxis(180.0f, Vector3.up);
+         }
+
+        
+
+            if (damageCollider)
+            {
             ContactFilter2D filter = new ContactFilter2D();
             filter.ClearLayerMask();
             filter.SetLayerMask(LayerMask.GetMask("player"));
@@ -66,4 +73,10 @@ public class Enemy_1 : MonoBehaviour
         }
 
     }
+
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(wallSensor.transform.position, 2.0f);
+    }
+
 }
