@@ -9,11 +9,11 @@ public class TP_Sull : MonoBehaviour {
     public Transform teleportDestination2;
     public Transform teleportDestination3;
     public Transform teleportDestination4;
-
+    private int key;
     // Start is called before the first frame update
     void Start() {
 
-
+        key = 0;
     }
 
     // Update is called once per frame
@@ -40,10 +40,18 @@ public class TP_Sull : MonoBehaviour {
 
           //vermelha
           else if (c.gameObject.tag == "TPV") {
-
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if (key == 3)
+                {SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); }
+            
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other) {
+        
+        if (other.gameObject.CompareTag("Collectable")) {
+            key += 1;
+            Destroy(other.gameObject);
+        }
 
+    }
 }

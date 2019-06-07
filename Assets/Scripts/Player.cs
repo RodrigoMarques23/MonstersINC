@@ -9,12 +9,17 @@ public class Player : MonoBehaviour {
     public Animator animator;
     public float knockbackSpeed = 250.0f;
     float knockbackTimer;
+    private bool key;
 
     private Rigidbody2D rb;
+    [SerializeField] private Collider2D  mainCollider;
+
     private bool facingRight = true;
+    private float gravityScale;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
+        gravityScale = rb.gravityScale;
     }
 
     void FixedUpdate() {
@@ -22,7 +27,29 @@ public class Player : MonoBehaviour {
 
         if (knockbackTimer <= 0.0f) {
             moveInput = Input.GetAxis("Horizontal");
-            rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+
+            Vector2 currentVelocity = rb.velocity;
+
+            currentVelocity.x = moveInput * speed;
+
+            Ladder ladder = IsOnLadder();
+            if (ladder)
+            {
+                rb.gravityScale = 0.0f;
+
+                float deltaY = Input.GetAxis("Vertical") * speed;
+
+                if ((!ladder.canGoUp) && (deltaY > 0.0f)) deltaY = 0.0f;
+                if ((!ladder.canGoDown) && (deltaY < 0.0f)) deltaY = 0.0f;
+
+                currentVelocity.y = deltaY;
+            }
+            else 
+            {
+                rb.gravityScale = gravityScale;
+            }
+
+            rb.velocity = currentVelocity;
 
             animator.SetFloat("speed", Mathf.Abs(moveInput));
 
@@ -44,13 +71,6 @@ public class Player : MonoBehaviour {
         rb.velocity = knockbackSpeed * hitDirection;
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.CompareTag("Collectable")) {
-            Destroy(other.gameObject);
-        }
-
-    }
-
     void flip() {
         facingRight = !facingRight;
         Vector3 Scaler = transform.localScale;
@@ -58,4 +78,38 @@ public class Player : MonoBehaviour {
         transform.localScale = Scaler;
     }
 
+    Ladder IsOnLadder() 
+    {
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.SetLayerMask(LayerMask.GetMask("ladder"));
+
+        Collider2D[] collisions = new Collider2D[16];
+
+        Collider2D collider = Physics2D.OverlapCircle(transform.position, 5.0f);
+        if (collider) {
+            Ladder ladder = collider.GetComponent<Ladder>();
+            if (ladder) {
+                return ladder;
+            }
+        }
+
+/*        int nCollisions = Physics2D.OverlapCollider(mainCollider, filter, collisions);
+
+        if (nCollisions > 0) 
+        {
+            for (int i = 0; i < nCollisions; i++)
+            {
+                Ladder ladder = collisions[i].GetComponent<Ladder>();
+                if (ladder) 
+                {
+                    return true;
+                }
+            }
+        }*/
+
+        return null;
+    }
 }
+
+
+

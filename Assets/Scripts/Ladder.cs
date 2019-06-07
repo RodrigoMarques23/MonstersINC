@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Ladder : MonoBehaviour
 {
-    public float speed = 6;
+    public bool canGoUp = true;
+    public bool canGoDown = true;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,8 @@ public class Ladder : MonoBehaviour
     {
         
     }
-    void OnTriggerStay2D(Collider2D p)
+
+/*    void OnTriggerStay2D(Collider2D p)
     {
         if (p.tag == "Player" && Input.GetKey(KeyCode.W))
         {
@@ -29,9 +32,6 @@ public class Ladder : MonoBehaviour
             Debug.Log("S");
             p.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -speed);
         }
-        else
-        {
-            p.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1);
-        }
-    }
+       
+    }*/
 }

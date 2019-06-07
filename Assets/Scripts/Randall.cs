@@ -65,6 +65,8 @@ public class Randall : MonoBehaviour
                         {
                             Vector3 hitDirection = player.transform.position - transform.position.normalized;
                             hitDirection.y = 1.0f;
+
+                            
                         }
                     }
                    

@@ -9,12 +9,16 @@ public class Camera_controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        offset = transform.position - player.transform.position; 
+        if (player != null) {
+            offset = transform.position - player.transform.position;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = player.transform.position + offset; 
+        if (player != null) {
+            transform.position = player.transform.position + offset;
+        }
     }
 }
