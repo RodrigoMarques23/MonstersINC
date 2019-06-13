@@ -7,7 +7,8 @@ public class Player : MonoBehaviour {
     public float jumpForce;
     public float moveInput;
     public Animator animator;
-    public float knockbackSpeed = 250.0f;
+    public float knockbackSpeed = 300.0f;
+
     float knockbackTimer;
     private bool key;
 
@@ -25,7 +26,8 @@ public class Player : MonoBehaviour {
     void FixedUpdate() {
 
 
-        if (knockbackTimer <= 0.0f) {
+        if (knockbackTimer <= 0.0f)
+        {
             moveInput = Input.GetAxis("Horizontal");
 
             Vector2 currentVelocity = rb.velocity;
@@ -59,14 +61,16 @@ public class Player : MonoBehaviour {
                 flip();
             }
 
-            if (knockbackTimer > 0.0f) {
+            if (knockbackTimer > 0.0f) 
+{
                 knockbackTimer -= Time.deltaTime;
             }
         }
     }
 
 
-    public void Knockback(Vector2 hitDirection) {
+    public void Knockback(Vector2 hitDirection)
+    {
         knockbackTimer = 0.5f;
         rb.velocity = knockbackSpeed * hitDirection;
     }

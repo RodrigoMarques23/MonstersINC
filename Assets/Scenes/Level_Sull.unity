@@ -248,7 +248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &157946754
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1131,6 +1131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sull
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358923401896222378, guid: 15a2868edd426f34fb32ef37c6041dce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7358923401896222371, guid: 15a2868edd426f34fb32ef37c6041dce,
         type: 3}

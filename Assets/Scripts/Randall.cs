@@ -49,7 +49,7 @@ public class Randall : MonoBehaviour
             filter.ClearLayerMask();
             filter.SetLayerMask(LayerMask.GetMask("player"));
 
-            Collider2D[] results = new Collider2D[4];
+            Collider2D[] results = new Collider2D[10];
 
 
             int nCollision = Physics2D.OverlapCollider(damageCollider, filter, results);
@@ -63,10 +63,11 @@ public class Randall : MonoBehaviour
                         Player player = collider.GetComponent<Player>();
                         if (player)
                         {
-                            Vector3 hitDirection = player.transform.position - transform.position.normalized;
+                            Vector3 hitDirection = (player.transform.position - transform.position).normalized;
                             hitDirection.y = 1.0f;
+                            hitDirection.x = -1.5f;
 
-                            
+                            player.Knockback(hitDirection);
                         }
                     }
                    
