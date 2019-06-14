@@ -248,7 +248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &157946754
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -668,6 +668,16 @@ PrefabInstance:
       propertyPath: m_AutoTiling
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2160258547851889062, guid: 1c5464340b284774f8ef4ab0fd31f48d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160258547851889062, guid: 1c5464340b284774f8ef4ab0fd31f48d,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -334.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2160258547851889063, guid: 1c5464340b284774f8ef4ab0fd31f48d,
         type: 3}
       propertyPath: m_UsedByComposite
@@ -682,6 +692,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160258547851889063, guid: 1c5464340b284774f8ef4ab0fd31f48d,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -148
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160258547851889063, guid: 1c5464340b284774f8ef4ab0fd31f48d,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1220
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160258547851889063, guid: 1c5464340b284774f8ef4ab0fd31f48d,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -28
       objectReference: {fileID: 0}
     - target: {fileID: 2160258547851889066, guid: 1c5464340b284774f8ef4ab0fd31f48d,
         type: 3}
@@ -701,12 +726,17 @@ PrefabInstance:
     - target: {fileID: 2160258547851889066, guid: 1c5464340b284774f8ef4ab0fd31f48d,
         type: 3}
       propertyPath: m_Offset.y
-      value: 59.3
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 2160258547851889066, guid: 1c5464340b284774f8ef4ab0fd31f48d,
         type: 3}
       propertyPath: m_Offset.x
-      value: 96.2
+      value: 81
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160258547851889066, guid: 1c5464340b284774f8ef4ab0fd31f48d,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1066
       objectReference: {fileID: 0}
     - target: {fileID: 2160258547851889067, guid: 1c5464340b284774f8ef4ab0fd31f48d,
         type: 3}
@@ -726,12 +756,12 @@ PrefabInstance:
     - target: {fileID: 2160258547851889067, guid: 1c5464340b284774f8ef4ab0fd31f48d,
         type: 3}
       propertyPath: m_Offset.x
-      value: -529.16
+      value: -531
       objectReference: {fileID: 0}
     - target: {fileID: 2160258547851889067, guid: 1c5464340b284774f8ef4ab0fd31f48d,
         type: 3}
       propertyPath: m_Offset.y
-      value: 60
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 2160258547851889065, guid: 1c5464340b284774f8ef4ab0fd31f48d,
         type: 3}
@@ -1017,12 +1047,22 @@ PrefabInstance:
     - target: {fileID: 4734797346213364132, guid: 4e25e64da2df68146ab75e7293a2435e,
         type: 3}
       propertyPath: m_Size.y
-      value: 34.7
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 4734797346213364132, guid: 4e25e64da2df68146ab75e7293a2435e,
         type: 3}
       propertyPath: m_Offset.y
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4734797346213364132, guid: 4e25e64da2df68146ab75e7293a2435e,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4734797346213364132, guid: 4e25e64da2df68146ab75e7293a2435e,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 4734797346213364133, guid: 4e25e64da2df68146ab75e7293a2435e,
         type: 3}
@@ -1202,6 +1242,11 @@ PrefabInstance:
       propertyPath: mainCollider
       value: 
       objectReference: {fileID: 1563748260}
+    - target: {fileID: 7358923401896222381, guid: 15a2868edd426f34fb32ef37c6041dce,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7358923401896222383, guid: 15a2868edd426f34fb32ef37c6041dce, type: 3}
     - {fileID: 7358923401896222382, guid: 15a2868edd426f34fb32ef37c6041dce, type: 3}

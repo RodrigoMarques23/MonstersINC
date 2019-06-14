@@ -9,12 +9,14 @@ public class Player : MonoBehaviour {
     public Animator animator;
     public float knockbackSpeed = 300.0f;
 
+
     float knockbackTimer;
     private bool key;
 
     private Rigidbody2D rb;
     [SerializeField] private Collider2D mainCollider;
 
+    private bool climb = true;
     private bool facingRight = true;
     private float gravityScale;
 
@@ -42,6 +44,22 @@ public class Player : MonoBehaviour {
                 if ((!ladder.canGoUp) && (deltaY > 0.0f)) deltaY = 0.0f;
                 if ((!ladder.canGoDown) && (deltaY < 0.0f)) deltaY = 0.0f;
 
+                if (Input.GetKey(KeyCode.W))
+                    {
+                        animator.SetBool("climb", true);
+                    }
+
+                    else if (Input.GetKey(KeyCode.S))
+                    {
+                        animator.SetBool("climb", true);
+                    }
+                    else
+                    {
+                        animator.SetBool("climb", false);
+                    }
+
+                
+                   
                 currentVelocity.y = deltaY;
             } else {
                 rb.gravityScale = gravityScale;
@@ -53,7 +71,8 @@ public class Player : MonoBehaviour {
 
             if (facingRight == false && moveInput > 0) {
                 flip();
-            } else if (facingRight == true && moveInput < 0) {
+            }
+            else if (facingRight == true && moveInput < 0) {
                 flip();
             }
 
