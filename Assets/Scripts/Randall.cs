@@ -27,11 +27,9 @@ public class Randall : MonoBehaviour
          Collider2D groundCollider = Physics2D.OverlapCircle(groundSensor.position, 2.0f, LayerMask.GetMask("ground"));
          if (groundCollider == null)
          {
-//            Debug.Log("Ground: Colliding with " + groundCollider.name);
 
             if (transform.right.x > 0) transform.rotation = Quaternion.Euler(0, 180, 0);
             else transform.rotation = Quaternion.identity;
-//            transform.rotation = transform.rotation * Quaternion.AngleAxis(180.0f, Vector3.up);
          }
 
          Collider2D wallCollider = Physics2D.OverlapCircle(wallSensor.position, 2.0f,LayerMask.GetMask("ground")); 

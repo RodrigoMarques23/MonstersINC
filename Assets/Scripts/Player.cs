@@ -13,7 +13,7 @@ public class Player : MonoBehaviour {
     private bool key;
 
     private Rigidbody2D rb;
-    [SerializeField] private Collider2D  mainCollider;
+    [SerializeField] private Collider2D mainCollider;
 
     private bool facingRight = true;
     private float gravityScale;
@@ -26,8 +26,7 @@ public class Player : MonoBehaviour {
     void FixedUpdate() {
 
 
-        if (knockbackTimer <= 0.0f)
-        {
+        if (knockbackTimer <= 0.0f) {
             moveInput = Input.GetAxis("Horizontal");
 
             Vector2 currentVelocity = rb.velocity;
@@ -35,8 +34,7 @@ public class Player : MonoBehaviour {
             currentVelocity.x = moveInput * speed;
 
             Ladder ladder = IsOnLadder();
-            if (ladder)
-            {
+            if (ladder) {
                 rb.gravityScale = 0.0f;
 
                 float deltaY = Input.GetAxis("Vertical") * speed;
@@ -45,9 +43,7 @@ public class Player : MonoBehaviour {
                 if ((!ladder.canGoDown) && (deltaY < 0.0f)) deltaY = 0.0f;
 
                 currentVelocity.y = deltaY;
-            }
-            else 
-            {
+            } else {
                 rb.gravityScale = gravityScale;
             }
 
@@ -61,16 +57,16 @@ public class Player : MonoBehaviour {
                 flip();
             }
 
-            if (knockbackTimer > 0.0f) 
-{
-                knockbackTimer -= Time.deltaTime;
-            }
+
+        } else {
+
+            knockbackTimer -= Time.deltaTime;
         }
+
     }
 
 
-    public void Knockback(Vector2 hitDirection)
-    {
+    public void Knockback(Vector2 hitDirection) {
         knockbackTimer = 0.5f;
         rb.velocity = knockbackSpeed * hitDirection;
     }
@@ -82,8 +78,7 @@ public class Player : MonoBehaviour {
         transform.localScale = Scaler;
     }
 
-    Ladder IsOnLadder() 
-    {
+    Ladder IsOnLadder() {
         ContactFilter2D filter = new ContactFilter2D();
         filter.SetLayerMask(LayerMask.GetMask("ladder"));
 
@@ -96,21 +91,6 @@ public class Player : MonoBehaviour {
                 return ladder;
             }
         }
-
-/*        int nCollisions = Physics2D.OverlapCollider(mainCollider, filter, collisions);
-
-        if (nCollisions > 0) 
-        {
-            for (int i = 0; i < nCollisions; i++)
-            {
-                Ladder ladder = collisions[i].GetComponent<Ladder>();
-                if (ladder) 
-                {
-                    return true;
-                }
-            }
-        }*/
-
         return null;
     }
 }
