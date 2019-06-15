@@ -8,7 +8,9 @@ public class MainMenu : MonoBehaviour
 public void PlayMike()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }public void PlaySull()
+    }
+
+    public void PlaySull()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
@@ -16,6 +18,8 @@ public void PlayMike()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -3);
     }
+
+
     public void QuitGame()
     {
         Debug.Log("quit");
