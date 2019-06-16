@@ -1,11 +1,17 @@
 fileFormatVersion: 2
-guid: c23a0d0c701989840a464d51b0092b5b
+guid: 4cc00bb513308da4c9242a4bc2e88d37
 TextureImporter:
   fileIDToRecycleName:
-    21300000: alert_0
-    21300002: alert_1
+    21300000: luzes_0
+    21300002: luzes_1
+    21300004: luzes_2
+    21300006: luzes_3
+    21300008: luzes_4
+    21300010: luzes_5
+    21300012: luzes_6
+    21300014: luzes_7
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 9
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -82,17 +88,28 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: alert_0
+      name: luzes_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 72
-        width: 158
-        height: 92
+        x: 57
+        y: 54
+        width: 110
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -100,19 +117,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fd0e606e43d16c42a0faae0d237c516
+      spriteID: b79a368cb68ddb9418bbe68de30f4657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: alert_1
+      name: luzes_1
       rect:
         serializedVersion: 2
-        x: 200
-        y: 7
-        width: 92
-        height: 157
+        x: 202
+        y: 57
+        width: 113
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,7 +137,127 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f05a2d0dc8127142b53a999aae6b4a5
+      spriteID: dd0e8a29041260d4c83ccff8cdadfae8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luzes_2
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 60
+        width: 106
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c90db1e3981a264f985fcffdd27369b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luzes_3
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 64
+        width: 99
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7a77b29372ce44d9244eba1be8a9d5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luzes_4
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 54
+        width: 110
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7499b40c2db4f2e4f978926d87b12955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luzes_5
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 57
+        width: 113
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d34b1ecb0c0e4d429888b28680abb4d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luzes_6
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 62
+        width: 106
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b04ab304a8d8544be5a007b783dd78
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luzes_7
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 62
+        width: 99
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba4d365252e951c4ebee1ccdb4cbef35
       vertices: []
       indices: 
       edges: []
@@ -128,7 +265,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8b2ddeb0f2042af4a8b750c5bb6c8dba
+    spriteID: 545c40c864aabbf4e99c8d23b43a2798
     vertices: []
     indices: 
     edges: []
