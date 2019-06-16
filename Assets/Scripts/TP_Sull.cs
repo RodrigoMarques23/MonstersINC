@@ -37,12 +37,11 @@ public class TP_Sull : MonoBehaviour {
         } else if (c.gameObject.tag == "TPAZ2" && Input.GetKey(KeyCode.S)) {
             transform.position = teleportDestination4.position;
         }
-
-          //vermelha
-          else if (c.gameObject.tag == "TPV") {
-            if (key == 3)
-                {SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); }
-            
+        
+        //vermelha
+        else if (c.gameObject.tag == "TPV")
+        {
+            if (key >= 2) { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); }
         }
     }
 
